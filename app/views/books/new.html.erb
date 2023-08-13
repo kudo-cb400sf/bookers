@@ -1,7 +1,12 @@
 <h2>Books</h2>
 
+<!--ここに投稿一覧を表示させたい。-->
 
 <h3>New book</h3>
+
+<div>
+  <%= flash[:notice] %>
+</div>
 
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
   
