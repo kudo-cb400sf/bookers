@@ -7,7 +7,8 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
     else
       flash[:notice] = " errors prohibited this book from being saved:"
-      render :new
+      @books = Book.all
+      render :index
     end
   end
 
